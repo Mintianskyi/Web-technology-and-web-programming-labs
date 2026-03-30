@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Lab1</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#zav1">Завдання 1</a></li>
+            <li><a href="#zav2">Завдання 2</a></li>
+            <li><a href="#zav3">Завдання 3</a></li>
+        </ul>
+    </header>
+
+    <section id="zav1">
+        <h2>Завдання 1</h2>
+        <h3>4. Знайти суму і добуток цифр натурального числа, що вводиться.</h3>
+        
+        <div>
+            <input type="number" id="num1" placeholder="Ведіть перше число ">
+            <input type="number" id="num2" placeholder="Ведіть друге число">
+        </div>
+        
+        <button onclick="SumAndProduct()">Розрахувати</button>
+        
+        <div>
+            <p id="sumResult">Cума:</p>
+            <p id="prodResult">Довбуток:</p>
+        </div>
+    </section>
+
+    <section id="zav2">
+        <h2>Завдання 2</h2>
+        <h3>6. Згенеруйте рандомний пароль. Напишiть функцiю JavaScript, яка генерує рандомний пароль заданої довжини, використовуючи комбiнацiю лiтер, цифр i спецiальних символiв.</h3>
+
+        <input type="number" id="length">
+
+        <button onclick="password_generator()">Згенерувати</button>
+
+        <p id="password"></p>
+    </section>
+
+    <section id="zav3">
+        <h2>Завдання 3</h2>
+        <h3>2. Обчислити кількість символів у тексті.</h3>
+
+        <textarea name="tex" id="tex"></textarea>
+
+        <button onclick="charater_counter()">Обчислити</button>
+
+        <p id="count_tex"></p>
+    </section>
+
+
+    <script src="SumAndProduct.js"></script>
+    <script src="password_generator.js"></script>
+    <script src="character_counter.js"></script>
+
+</body>
+</html>
