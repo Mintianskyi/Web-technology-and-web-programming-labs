@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота № 2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+
+            <a href="#" class="logo">CoreStore</a>
+
+            <div class="search">
+                <input type="text">
+                <button>Пошук</button>
+            </div>
+
+            <div class="nav-buttons">
+                <button>Увійти</button>
+                <button id="register-btn">Регістрація</button>
+                <button id="cart-btn">Кошик</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hot-offers">
+            <h2>Гарячі пропозиції</h2>
+            <div class="carusel-wrapper">
+
+                <button class="carusel-btn prev-btn" id="prev-btn">&#10094;</button>
+
+                <div class="carusel-window">
+
+                    <div class="carusel-track" id="track">
+
+                        <div class="carusel-slide">
+                            <img src="./image/headphone.webp" alt="headphone">
+                            <h3>Навушники Marshall Major IV 4 Brown</h3>
+                            <p class="price"><del>6 400₴</del> 3 999₴ </p>
+                            <button class="buy-btn">В кошик</button>
+                        </div>
+
+                        <div class="carusel-slide">
+                            <img src="./image/Gaming PC AMD Ryzen 9 5900X.webp" alt="Gaming PC AMD Ryzen 9 5900X">
+                            <h3>Ігровий ПК AMD Ryzen 9 5900X / NVIDIA RTX 5060 / 32 GB DDR4 / 1 TB SSD M2 NVME / ASUS PRIME AMD 570P</h3>
+                            <p class="price"><del>79 999₴</del> 49 999₴</p>
+                            <button class="buy-btn">В кошик</button>
+                        </div>
+
+                        <div class="carusel-slide">
+                            <img src="./image/Apple MacBook Air laptop.webp" alt="Apple MacBook Air laptop">
+                            <h3>Ноутбук Apple MacBook Air 15.3" M5 16/512GB 2026 (MDVH4UA/A) Midnight</h3>
+                            <p class="price"><del>84 999₴</del> 76 499₴</p>
+                            <button class="buy-btn">В кошик</button>
+                        </div>
+
+                        <div class="carusel-slide">
+                            <img src="./image/Mechanical wireless keyboard with HOT SWAP AULA F75.webp" alt="Mechanical wireless keyboard with HOT SWAP AULA F75">
+                            <h3>Механічна бездротова (Bluetooth + 2,4G) клавіатура з HOT SWAP AULA F75 RGB Reaper switch Mac/Win УКР/АНГЛ WHITE/BLACK (F75WB)</h3>
+                            <p class="price"><del>4 999₴</del>3 000₴</p>
+                            <button class="buy-btn">В кошик</button>
+                        </div>
+
+                        <div class = "carusel-slide">
+                            <img src="./image/Monitor 27 MSI MAG 274QRF-QD E2.webp" alt="Monitor 27 MSI MAG 274QRF-QD E2">
+                            <h3>Монітор 27" MSI MAG 274QRF-QD E2 -- Quantum Dot / Rapid IPS QHD (2K) / 180Hz / 1ms GtG / 8-Bit + FRC / DisplayHDR 400 / Type-C 65W PD / G-Sync Compatible / Adaptive Sync / HAS / Pivot / KVM / Console Mode 2K 120Hz</h3>
+                            <p class="price"><del>13 999₴</del>12 699₴</p>
+                            <button class="buy-btn">В кошик</button>
+                        </div>
+
+                        <div class="carusel-slide">
+                            <img src="./image/Redmi Buds 8 Active headphones.webp" alt="Redmi Buds 8 Active headphones">
+                            <h3>Навушники Redmi Buds 8 Active</h3>
+                            <p class="price"><del>1 000₴</del>919₴</p>
+                            <button class="buy-btn">В кошик</button>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carusel-btn next-btn" id="next-btn">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="catalog-section">
+            <h2>Каталог товарів</h2>
+    
+            <div class="filter-panel">
+                <input type="text" id="search-input" placeholder="Пошук за назвою...">
+        
+                <select id="category-filter">
+                    <option value="all">Усі категорії</option>
+                    <option value="headphones">Навушники</option>
+                    <option value="laptops">Ноутбуки</option>
+                    <option value="pc">Комп'ютери</option>
+                    <option value="monitors">Монітори</option>
+                </select>
+
+                <select id="sort-filter">
+                    <option value="default">Сортування</option>
+                    <option value="price-asc">Від дешевих до дорогих</option>
+                    <option value="price-desc">Від дорогих до дешевих</option>
+                    <option value="name-asc">За назвою (А-Я)</option>
+                </select>
+            </div>
+
+            <div id="catalog-container" class="catalog-grid">
+            </div>
+        </section>
+
+        <section id="news-section">
+            <h2>Новини</h2>
+            <div id="news-container">
+            </div>
+        </section>
+    </main>
+
+    <div id="sub-banner" class="banner hidden">
+        <p>Бажаєте отримувати найсвіжіші новини від CoreStore?</p>
+        <div class="banner-btns">
+            <button id="sub-accept">Прийняти</button>
+            <button id="sub-decline">Відхилити</button>
+        </div>
+    </div>
+
+    <div id="ad-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span id="close-ad-timer">Закрити через 5...</span>
+            <button id="close-ad-btn" disabled>✖</button>
+            <h2>Тільки сьогодні!</h2>
+            <p>Знижки на всі аксесуари Marshall!</p>
+        </div>
+    </div>
+
+    <button id="scroll-top-btn" class="hidden">↑</button>
+
+    <script src="carusel.js"></script>
+    <script src="catalog.js"></script>  
+    <script src="news.js"></script>
+    <script src="subscribe.js"></script>
+    <script src="ads.js"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>
